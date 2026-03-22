@@ -1,0 +1,14 @@
+class Solution:
+    def intersection(self, nums: List[List[int]]) -> List[int]:
+        my_map = defaultdict(int)
+        for n in nums:
+            for l in n:
+                my_map[l] += 1
+        ans= []
+        for m in my_map:
+            if my_map[m] ==len(nums):
+                ans.append(m)
+
+        ans.sort()
+        return ans
+        
